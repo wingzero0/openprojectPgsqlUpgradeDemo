@@ -24,6 +24,8 @@ exit
 cp ./pgdata/pg_dump.sql ../openproject7.4/pgdata/
 ```
 
+## restore plain text sql to 9.6
+
 login openproject7.4 container bash shell and re-create db with sql
 ```bash
 cd ../openproject7.4/
