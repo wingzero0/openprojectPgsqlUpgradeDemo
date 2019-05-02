@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  app:
+    image: openproject/community:7.3
+    environment:
+      - SECRET_KEY_BASE=secret
+    ports:
+      - 8080:80
+    volumes:
+      - ./pgdata:/tmp/pgsqldump/
+#       - openproject-postgresql:/var/lib/postgresql/9.4/main
+
+# volumes:
+#   openproject-postgresql:
+#     external: true
+    # volumes:
+      # - ./pgdata:/var/lib/postgresql/9.4/main
+      # - ./logs:/var/log/supervisor
+      # - ./static:/var/db/openproject
+      # - ./pgdata:/var/openproject/pgdata
+      # - ./static:/var/openproject/assets
+    # command: bash
+    # stdin_open: true
+    # tty: true
